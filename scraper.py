@@ -17,7 +17,7 @@ def parse_home ():
             links_to_notices = parsed.xpath(XPATH_LINK_TO_ARTICLE)
             print(links_to_notices)
         else:
-            raise ValueError(f 'Error: {response.status_code}')
+            raise ValueError(f'Error: {response.status_code}')
     except ValueError as ve:
         print (ve)
 
