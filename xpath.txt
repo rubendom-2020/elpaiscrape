@@ -1,1 +1,2 @@
-//h2[@class="headline | color_gray_ultra_dark font_secondary width_full"]/a/@href
+Links = //h2[@class="headline | color_gray_ultra_dark font_secondary width_full"]/a/@href
+Titulo = //h1[@class="a_t | font_secondary color_gray_ultra_dark"]/text()
