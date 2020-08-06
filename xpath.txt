@@ -1,4 +1,4 @@
-Links = //*[@id="fusion-app"]/div[5]/div[2]/div[1]/div[2]/article[2]/h2/a/text()
-Titulo = //h1[@class="a_t | font_secondary color_gray_ultra_dark"]/text()
-Resumen = //*[@id="article_header"]/h2/text()
-Cuerpo = //div[@class="a_b article_body | color_gray_dark"]/p/text()
+Links = '//*[@id="fusion-app"]/div[5]/div[2]/div[1]/div[2]/article[2]/h2/a/@href'
+Titulo = '//*[@id="article_header"]/h1/text()'
+Resumen = '//*[@id="article_header"]/h2/text()'
+Cuerpo = '//*[@id="fusion-app"]/article/div[1]/div[1]/p[1]/text()'
