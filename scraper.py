@@ -3,11 +3,10 @@ import lxml.html as html
 
 HOME_URL = 'https://www.elpais.com/'
 
-XPATH_LINK_TO_ARTICLE = '//*[@id="fusion-app"]/div[5]/div[2]/div[1]/div[2]/article[2]/h2/a/text()'
-XPATH_TITLE = '//h1[@class="a_t | font_secondary color_gray_ultra_dark"]/text()'
+XPATH_LINK_TO_ARTICLE = '//*[@id="fusion-app"]/div[5]/div[2]/div[1]/div[2]/article[2]/h2/a/@href'
+XPATH_TITLE = '//*[@id="article_header"]/h1/text()'
 XPATH_SUMMARY = '//*[@id="article_header"]/h2/text()'
-XPATH_BODY = '//div[@class="a_b article_body | color_gray_dark"]/p/text()'
-
+XPATH_BODY = '//*[@id="fusion-app"]/article/div[1]/div[1]/p[1]/text()'
 def parse_home ():
     try:
         response = requests.get(HOME_URL)
