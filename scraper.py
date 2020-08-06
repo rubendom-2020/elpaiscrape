@@ -7,6 +7,8 @@ XPATH_LINK_TO_ARTICLE = '//*[@id="fusion-app"]/div[5]/div[2]/div[1]/div[2]/artic
 XPATH_TITLE = '//*[@id="article_header"]/h1/text()'
 XPATH_SUMMARY = '//*[@id="article_header"]/h2/text()'
 XPATH_BODY = '//*[@id="fusion-app"]/article/div[1]/div[1]/p[1]/text()'
+
+
 def parse_home ():
     try:
         response = requests.get(HOME_URL)
@@ -30,12 +32,22 @@ import lxml.html as html
 import os
 import datetime
 
-HOME_URL = 'https://www.larepublica.co/'
+HOME_URL = 'https://www.elpais.com/'
+
+XPATH_LINK_TO_ARTICLE = '//*[@id="fusion-app"]/div[5]/div[2]/div[1]/div[2]/article[2]/h2/a/@href'
+XPATH_TITLE = '//*[@id="article_header"]/h1/text()'
+XPATH_SUMMARY = '//*[@id="article_header"]/h2/text()'
+XPATH_BODY = '//*[@id="fusion-app"]/article/div[1]/div[1]/p[1]/text()'
+
+
+
+
+""" HOME_URL = 'https://www.larepublica.co/'
 
 XPATH_LINK_TO_ARTICLE = '//h2[@class="headline"]/a/@href'
 XPATH_TITLE = '//h1[@class="headline"]/a/text()'
 XPATH_SUMMARY = '//div[@class="lead"]/p/text()'
-XPATH_BODY = '//div[@class="articleWrapper  "]/p[not(@class)]/text()'
+XPATH_BODY = '//div[@class="articleWrapper  "]/p[not(@class)]/text()' """
 
 
 def parse_notice(link, today):
